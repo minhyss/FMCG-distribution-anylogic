@@ -4,7 +4,7 @@
 	         AnyLogic Project File 
 *************************************************	         
 -->
-<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.7.4.202104291649" AlpVersion="8.7.2">
+<AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.7.4.202104291558" AlpVersion="8.7.2">
 <Model>
 	<Id>1623032419010</Id>
 	<Name><![CDATA[FmcgChain]]></Name>
@@ -406,7 +406,7 @@ factory.setLocation(factoryGIS);]]></StartupCode>
 					<Id>1623901200201</Id>
 					<Name><![CDATA[storeCoverDays]]></Name>
 					<Description><![CDATA[Days of demand each store replenishes up to]]></Description>
-					<X>-250</X><Y>420</Y>
+					<X>-250</X><Y>660</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -425,7 +425,7 @@ factory.setLocation(factoryGIS);]]></StartupCode>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
 							<DelimeterType>NO_DELIMETER</DelimeterType>
 						</ParameterEditor>
-					</Properties>
+					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1623901200202</Id>
@@ -450,13 +450,13 @@ factory.setLocation(factoryGIS);]]></StartupCode>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
 							<DelimeterType>NO_DELIMETER</DelimeterType>
 						</ParameterEditor>
-					</Properties>
+					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1623901200203</Id>
 					<Name><![CDATA[weekSeasonality]]></Name>
 					<Description><![CDATA[Weekly multipliers separated by semicolons, index 0 = first day]]></Description>
-					<X>-250</X><Y>480</Y>
+					<X>-250</X><Y>630</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -475,13 +475,13 @@ factory.setLocation(factoryGIS);]]></StartupCode>
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
 							<DelimeterType>NO_DELIMETER</DelimeterType>
 						</ParameterEditor>
-					</Properties>
+					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1623332463771</Id>
 					<Name><![CDATA[truckCapacityOfRetailer]]></Name>
 					<Description><![CDATA[Store truck capacity]]></Description>
-					<X>-250</X><Y>450</Y>
+					<X>-250</X><Y>600</Y>
 					<Label><X>10</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -1127,7 +1127,7 @@ else
 								<Code><![CDATA[devDemand]]></Code>
 							</Value>
 						</Parameter>
-					<Parameter>
+						<Parameter>
 							<Name><![CDATA[storeCoverDays]]></Name>
 							<Value Class="CodeValue">
 								<Code><![CDATA[storeCoverDays]]></Code>
@@ -1145,7 +1145,7 @@ else
 								<Code><![CDATA[weekSeasonality]]></Code>
 							</Value>
 						</Parameter>
-						</Parameters>
+					</Parameters>
 					<ReplicationFlag>true</ReplicationFlag>
 					<Replication Class="CodeValue">
 						<Code><![CDATA[100]]></Code>
@@ -1398,9 +1398,9 @@ else
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
 					<ScaleXCode><![CDATA[0.5]]></ScaleXCode>
 					<ScaleYCode><![CDATA[0.5]]></ScaleYCode>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
 					<ScaleType>DEFINED_EXPLICITLY</ScaleType>
 					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
 					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
@@ -1419,9 +1419,9 @@ else
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
 					<ScaleXCode><![CDATA[0.35]]></ScaleXCode>
 					<ScaleYCode><![CDATA[0.35]]></ScaleYCode>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
 					<ScaleType>DEFINED_EXPLICITLY</ScaleType>
 					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
 					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
@@ -1440,9 +1440,9 @@ else
 					<EmbeddedIcon>false</EmbeddedIcon>
 					<Z>0</Z>
 					<Rotation>0.0</Rotation>
-					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
 					<ScaleXCode><![CDATA[0.25]]></ScaleXCode>
 					<ScaleYCode><![CDATA[0.25]]></ScaleYCode>
+					<DrawingMode>AGENT_CURRENT_POSITION</DrawingMode>
 					<ScaleType>DEFINED_EXPLICITLY</ScaleType>
 					<GISScaleForRealEmbeddedObjectPresentationSize>1000</GISScaleForRealEmbeddedObjectPresentationSize>
 					<GISScaleForFixedEmbeddedObjectPresentationSize>1000000000</GISScaleForFixedEmbeddedObjectPresentationSize>
@@ -3135,7 +3135,6 @@ if (currentInventory <= avgLeadTime.mean()*avgDemand.mean() + SS)
 						<Unit Class="TimeUnits"><![CDATA[WEEK]]></Unit>
 					</RecurrenceCode>
 					<Discrete>true</Discrete>
-					<ValueCode><![CDATA[]]></ValueCode>
 				</Statistics>
     			<Statistics>
 					<Id>1623308117767</Id>
@@ -3996,6 +3995,86 @@ if(getIndex() < getPopulation().size() - 1) {
 						</InitialValue>
 					</Properties>
 				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1623901100101</Id>
+					<Name><![CDATA[onHand]]></Name>
+					<Description><![CDATA[Units physically on the shelf]]></Description>
+					<X>-430</X><Y>250</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[50]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1623901100103</Id>
+					<Name><![CDATA[onOrder]]></Name>
+					<Description><![CDATA[Units ordered but not yet received]]></Description>
+					<X>-430</X><Y>280</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1623901100104</Id>
+					<Name><![CDATA[lostSales]]></Name>
+					<Description><![CDATA[Demand that walked out because the shelf was empty]]></Description>
+					<X>-430</X><Y>310</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1623901100105</Id>
+					<Name><![CDATA[servedDemand]]></Name>
+					<Description><![CDATA[Demand served from stock]]></Description>
+					<X>-430</X><Y>340</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
+				<Variable Class="PlainVariable">
+					<Id>1623901100106</Id>
+					<Name><![CDATA[demandTotal]]></Name>
+					<Description><![CDATA[Demand generated at this store]]></Description>
+					<X>-430</X><Y>370</Y>
+					<Label><X>10</X><Y>0</Y></Label>
+					<PublicFlag>false</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>true</ShowLabel>
+					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
+						<Type><![CDATA[double]]></Type>        
+						<InitialValue Class="CodeValue">
+							<Code><![CDATA[0]]></Code>
+						</InitialValue>
+					</Properties>
+				</Variable>
 				<Variable Class="Parameter">
 					<Id>1623248372208</Id>
 					<Name><![CDATA[longitude]]></Name>
@@ -4194,86 +4273,6 @@ if(getIndex() < getPopulation().size() - 1) {
 						</ParameterEditor>
 					</Properties>                 
 				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1623901100101</Id>
-					<Name><![CDATA[onHand]]></Name>
-					<Description><![CDATA[Units physically on the shelf]]></Description>
-					<X>-430</X><Y>250</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[50]]></Code>
-						</InitialValue>
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1623901100103</Id>
-					<Name><![CDATA[onOrder]]></Name>
-					<Description><![CDATA[Units ordered but not yet received]]></Description>
-					<X>-430</X><Y>280</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</InitialValue>
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1623901100104</Id>
-					<Name><![CDATA[lostSales]]></Name>
-					<Description><![CDATA[Demand that walked out because the shelf was empty]]></Description>
-					<X>-430</X><Y>310</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</InitialValue>
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1623901100105</Id>
-					<Name><![CDATA[servedDemand]]></Name>
-					<Description><![CDATA[Demand served from stock]]></Description>
-					<X>-430</X><Y>340</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</InitialValue>
-					</Properties>
-				</Variable>
-				<Variable Class="PlainVariable">
-					<Id>1623901100106</Id>
-					<Name><![CDATA[demandTotal]]></Name>
-					<Description><![CDATA[Demand generated at this store]]></Description>
-					<X>-430</X><Y>370</Y>
-					<Label><X>10</X><Y>0</Y></Label>
-					<PublicFlag>false</PublicFlag>
-					<PresentationFlag>true</PresentationFlag>
-					<ShowLabel>true</ShowLabel>
-					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>
-						<InitialValue Class="CodeValue">
-							<Code><![CDATA[0]]></Code>
-						</InitialValue>
-					</Properties>
-				</Variable>
 				<Variable Class="Parameter">
 					<Id>1623901100102</Id>
 					<Name><![CDATA[storeCoverDays]]></Name>
@@ -4297,7 +4296,7 @@ if(getIndex() < getPopulation().size() - 1) {
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
 							<DelimeterType>NO_DELIMETER</DelimeterType>
 						</ParameterEditor>
-					</Properties>
+					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1623901100107</Id>
@@ -4322,7 +4321,7 @@ if(getIndex() < getPopulation().size() - 1) {
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
 							<DelimeterType>NO_DELIMETER</DelimeterType>
 						</ParameterEditor>
-					</Properties>
+					</Properties>                 
 				</Variable>
 				<Variable Class="Parameter">
 					<Id>1623901100108</Id>
@@ -4347,7 +4346,7 @@ if(getIndex() < getPopulation().size() - 1) {
 							<MaxSliderValue><![CDATA[100]]></MaxSliderValue>
 							<DelimeterType>NO_DELIMETER</DelimeterType>
 						</ParameterEditor>
-					</Properties>
+					</Properties>                 
 				</Variable>
 				<Variable Class="CollectionVariable">
 					<Id>1623331556575</Id>
@@ -5844,7 +5843,7 @@ send("Go", this);]]></Body>
 			<ScaleRuler>
 				<Id>1623644435159</Id>
 				<Name><![CDATA[scale]]></Name>
-				<X>0</X><Y>-150</Y>
+				<X>10</X><Y>120</Y>
 				<PublicFlag>false</PublicFlag>
 				<PresentationFlag>false</PresentationFlag>
 				<ShowLabel>false</ShowLabel>
@@ -5870,7 +5869,7 @@ send("Go", this);]]></Body>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>
+						<Type><![CDATA[double]]></Type>        
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
@@ -5883,7 +5882,7 @@ send("Go", this);]]></Body>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>
+						<Type><![CDATA[double]]></Type>        
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
@@ -5896,7 +5895,7 @@ send("Go", this);]]></Body>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>
+						<Type><![CDATA[double]]></Type>        
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
@@ -5909,7 +5908,7 @@ send("Go", this);]]></Body>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>
+						<Type><![CDATA[double]]></Type>        
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
@@ -5922,7 +5921,7 @@ send("Go", this);]]></Body>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>
+						<Type><![CDATA[double]]></Type>        
 					</Properties>
 				</Variable>
 				<Variable Class="PlainVariable">
@@ -5935,7 +5934,7 @@ send("Go", this);]]></Body>
 					<PresentationFlag>true</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[java.util.ArrayList<Double>]]></Type>
+						<Type><![CDATA[java.util.ArrayList<Double>]]></Type>        
 						<InitialValue Class="CodeValue">
 							<Code><![CDATA[new java.util.ArrayList<Double>()]]></Code>
 						</InitialValue>
@@ -6160,12 +6159,11 @@ return s;]]></Body>
 						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 					</RecurrenceCode>
 					<Discrete>true</Discrete>
-					<ValueCode><![CDATA[]]></ValueCode>
 				</Statistics>
     			<HistogramData>
 					<Id>1623646755194</Id>
 					<Name><![CDATA[histogramLeadTime]]></Name>
-					<X>-230</X><Y>0</Y>
+					<X>-230</X><Y>10</Y>
 					<Label><X>15</X><Y>0</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -6236,7 +6234,7 @@ return s;]]></Body>
 					</RecurrenceCode>
 					<Discrete>true</Discrete>
 				</Statistics>
-			<Statistics>
+    			<Statistics>
 					<Id>1623901300311</Id>
 					<Name><![CDATA[storeFillRate]]></Name>
 					<X>-230</X><Y>210</Y>
@@ -6256,9 +6254,8 @@ return s;]]></Body>
 						<Unit Class="TimeUnits"><![CDATA[HOUR]]></Unit>
 					</RecurrenceCode>
 					<Discrete>true</Discrete>
-					<ValueCode><![CDATA[]]></ValueCode>
 				</Statistics>
-				</AnalysisData>
+			</AnalysisData>
 			<AgentLinks>
 				<AgentLink>
 					<Id>1623644435158</Id>
@@ -6691,7 +6688,7 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 						<ColorHighPercent>-13447886</ColorHighPercent>
 						<ColorMean>-8097537</ColorMean>
 						<LineWidth>1</LineWidth>						
-						<Title><![CDATA[Completed store order lead time (days)]]></Title>
+						<Title><![CDATA[Completed store order lead time (days)]]></Title>							
 					</HistogramDataExpression>
     			</Histogram>
     			<TimePlot>
@@ -7164,16 +7161,16 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 						</InitialValue>
 					</Properties>
 				</Variable>
-			<Variable Class="PlainVariable">
+				<Variable Class="PlainVariable">
 					<Id>1623901400401</Id>
 					<Name><![CDATA[storeCoverDays]]></Name>
 					<X>-250</X><Y>210</Y>
-					<Label><X>10</X><Y>0</Y></Label>
+					<Label><X>15</X><Y>225</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>
+						<Type><![CDATA[double]]></Type>        
 						<InitialValue Class="CodeValue">
 							<Code><![CDATA[7]]></Code>
 						</InitialValue>
@@ -7183,12 +7180,12 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 					<Id>1623901400402</Id>
 					<Name><![CDATA[promoProbability]]></Name>
 					<X>-250</X><Y>240</Y>
-					<Label><X>10</X><Y>0</Y></Label>
+					<Label><X>15</X><Y>175</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[double]]></Type>
+						<Type><![CDATA[double]]></Type>        
 						<InitialValue Class="CodeValue">
 							<Code><![CDATA[0.08]]></Code>
 						</InitialValue>
@@ -7198,18 +7195,18 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 					<Id>1623901400403</Id>
 					<Name><![CDATA[weekSeasonality]]></Name>
 					<X>-250</X><Y>270</Y>
-					<Label><X>10</X><Y>0</Y></Label>
+					<Label><X>15</X><Y>185</Y></Label>
 					<PublicFlag>false</PublicFlag>
 					<PresentationFlag>false</PresentationFlag>
 					<ShowLabel>true</ShowLabel>
 					<Properties SaveInSnapshot="true" Constant="false" AccessType="public" StaticVariable="false">
-						<Type><![CDATA[String]]></Type>
+						<Type><![CDATA[String]]></Type>        
 						<InitialValue Class="CodeValue">
 							<Code><![CDATA["1.10;1.05;1.00;0.98;1.15;1.45;1.20"]]></Code>
 						</InitialValue>
 					</Properties>
 				</Variable>
-				</Variables>
+			</Variables>
 
 			<Presentation>
 				<Image>
@@ -7347,7 +7344,7 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1623036099210</Id>
 					<Name><![CDATA[editbox]]></Name>
-					<X>100</X><Y>110</Y>
+					<X>130</X><Y>110</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7369,7 +7366,7 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1623036125785</Id>
 					<Name><![CDATA[editbox1]]></Name>
-					<X>100</X><Y>150</Y>
+					<X>130</X><Y>150</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7434,7 +7431,7 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1623291145769</Id>
 					<Name><![CDATA[radio]]></Name>
-					<X>95</X><Y>460</Y>
+					<X>80</X><Y>480</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7592,7 +7589,7 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1623332337537</Id>
 					<Name><![CDATA[editbox8]]></Name>
-					<X>100</X><Y>190</Y>
+					<X>130</X><Y>190</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7614,7 +7611,7 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 				 	<EmbeddedIcon>false</EmbeddedIcon>				
 					<Id>1623332358800</Id>
 					<Name><![CDATA[editbox9]]></Name>
-					<X>100</X><Y>535</Y>
+					<X>100</X><Y>550</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7783,7 +7780,7 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 				<Text>
 					<Id>1623468814763</Id>
 					<Name><![CDATA[text25]]></Name>
-					<X>260</X><Y>250</Y>
+					<X>220</X><Y>260</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7804,7 +7801,7 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 				<Text>
 					<Id>1623468817322</Id>
 					<Name><![CDATA[text26]]></Name>
-					<X>260</X><Y>210</Y>
+					<X>240</X><Y>220</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7867,7 +7864,7 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 				<Text>
 					<Id>1623469001305</Id>
 					<Name><![CDATA[text28]]></Name>
-					<X>260</X><Y>285</Y>
+					<X>240</X><Y>290</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7888,7 +7885,7 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 				<Text>
 					<Id>1623469108704</Id>
 					<Name><![CDATA[text29]]></Name>
-					<X>20</X><Y>465</Y>
+					<X>20</X><Y>460</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -7930,7 +7927,7 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 				<Text>
 					<Id>1623469246357</Id>
 					<Name><![CDATA[text31]]></Name>
-					<X>200</X><Y>485</Y>
+					<X>170</X><Y>490</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -8074,7 +8071,7 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 						<Code><![CDATA[truckCapacityOfRetailer]]></Code>
 					</ParameterValue>
 				</Parameter>
-			<Parameter>
+				<Parameter>
 					<ParameterName><![CDATA[storeCoverDays]]></ParameterName>
 					<ParameterValue Class="CodeValue">
 						<Code><![CDATA[storeCoverDays]]></Code>
@@ -8092,7 +8089,7 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 						<Code><![CDATA[weekSeasonality]]></Code>
 					</ParameterValue>
 				</Parameter>
-				</Parameters>
+			</Parameters>			
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
 				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
@@ -8103,10 +8100,10 @@ main.navigate(main.viewAnimation);]]></OnClickCode>
 			</PresentationProperties>
 			<ModelTimeProperties>
 				<StopOption><![CDATA[Stop at specified time]]></StopOption>
-				<InitialDate><![CDATA[1623024000000]]></InitialDate>
-				<InitialTime><![CDATA[0.0]]></InitialTime>
-				<FinalDate><![CDATA[1625616000000]]></FinalDate>
-				<FinalTime><![CDATA[4320.0]]></FinalTime>
+				<InitialDate><![CDATA[1623024000000]]></InitialDate>	
+				<InitialTime><![CDATA[0.0]]></InitialTime>	
+				<FinalDate><![CDATA[1625616000000]]></FinalDate>	
+				<FinalTime><![CDATA[4320.0]]></FinalTime>	
 			</ModelTimeProperties>
 			<BypassInitialScreen>false</BypassInitialScreen>
 		</SimulationExperiment>	
